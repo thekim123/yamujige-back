@@ -20,9 +20,9 @@ spring:
 
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://database-1.ca5j7btszvya.ap-northeast-2.rds.amazonaws.com:3306/yamujige?serverTimezone=Asia/Seoul
-    username: yamujige
-    password: Yamujige1!
+    url: jdbc:mariadb://${rds.hostname}:${rds.port}/${rds.db.name}
+    username: ${rds.username}
+    password: ${rds.password}
 
   jpa:
     open-in-view: true
