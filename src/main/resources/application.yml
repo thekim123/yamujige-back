@@ -24,11 +24,10 @@ spring:
     username: yamujige
     password: Yamujige1!
 
-
   jpa:
     open-in-view: true
     hibernate:
-      ddl-auto: none
+      ddl-auto: create
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     show-sql: true
