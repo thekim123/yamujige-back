@@ -1,0 +1,38 @@
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+spring:
+  devtools:
+    remote:
+      restart:
+        enabled: true
+    livereload:
+      enabled: false
+  mvc:
+    dispatch-options-request: true
+
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://database-1.ca5j7btszvya.ap-northeast-2.rds.amazonaws.com:3306/yamujige?serverTimezone=Asia/Seoul
+    username: yamujige
+    password: Yamujige1!
+
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: create
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+    generate-ddl: true
+
+  h2:
+    console:
+      enabled: true
